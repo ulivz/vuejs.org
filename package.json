@@ -7,7 +7,9 @@
   "scripts": {
     "start": "hexo server",
     "build": "node pre-deploy.js && hexo clean && hexo generate",
-    "deploy": "npm run build && hexo deploy"
+    "deploy": "npm run build && hexo deploy",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=8.9.0"
@@ -27,6 +29,8 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.1",
     "hoek": "^5.0.3",
-    "request": "^2.85.0"
-  }
+    "request": "^2.85.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
